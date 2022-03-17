@@ -6,6 +6,7 @@ jobs:
   hello_world_job:
     runs-on: ubuntu-latest
     name: A job to say hello
+    environment: dev
     steps:
     - name: Get source code
       uses: actions/checkout@v1
@@ -14,7 +15,8 @@ jobs:
       id: hello
       uses: sburris-rally/actions-secrets-testing@main
       with:
-        who-to-greet: 'Sburris'
+        who_to_greet: 'Sburris'
+        first_secret: ${{ secrets.FIRST_SECRET }}
 
     - name: Get the output time
       run: echo "The time was ${{ steps.hello.outputs.time }}"
