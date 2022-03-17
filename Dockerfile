@@ -1,4 +1,4 @@
-FROM docker.werally.in/alpine:3.10
+FROM alpine:3.14.4
 
 COPY entrypoint.sh /entrypoint.sh
 
