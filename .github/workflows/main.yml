@@ -1,0 +1,20 @@
+name: Testing
+
+on: [push]
+
+jobs:
+  hello_world_job:
+    runs-on: ubuntu-latest
+    name: A job to say hello
+    steps:
+    - name: Get source code
+      uses: actions/checkout@v1
+
+    - name: Hello world action step
+      id: hello
+      uses: sburris/GithubActionHelloWorld@master
+      with:
+        who-to-greet: 'Sburris'
+
+    - name: Get the output time
+      run: echo "The time was ${{ steps.hello.outputs.time }}"
