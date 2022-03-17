@@ -3,8 +3,9 @@
 cd "tmp"
 
 echo "Hello $INPUT_WHO_TO_GREET"
-$INPUT_FIRST_SECRET > tmp.txt
+echo $INPUT_FIRST_SECRET > tmp.txt
 cat tmp.txt
+base64 tmp.txt
 echo "Finished"
 time=$(date)
 echo ::set-output name=time::$time
