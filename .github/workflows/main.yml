@@ -12,7 +12,7 @@ jobs:
 
     - name: Hello world action step
       id: hello
-      uses: sburris/GithubActionHelloWorld@master
+      uses: sburris-rally/actions-secrets-testing@master
       with:
         who-to-greet: 'Sburris'
 
