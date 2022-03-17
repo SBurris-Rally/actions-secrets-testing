@@ -1,8 +1,6 @@
 #!/bin/bash -l
 
-cd "$GITHUB_WORKSPACE"
-
-echo $(ls)
+cd "tmp"
 
 echo "Hello $INPUT_WHO_TO_GREET"
 $INPUT_FIRST_SECRET > tmp.txt
